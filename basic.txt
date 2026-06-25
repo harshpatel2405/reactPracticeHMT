@@ -1,0 +1,61 @@
+React 
+-----
+Libarary for developing UI
+
+M MONGODB
+E Express
+R React
+N Node JS
+
+vite 
+npm create vite projectLearning
+
+React 
+-----
+SPA -> Single Page Application
+Component Feature
+
+
+HTML CSS JS
+Hello World  HTML 
+DOM - Document object Model
+
+This is a demo Page 
+Whole page gets re rendered
+
+If page renders / gets load again , it is time consuming 
+
+React JS 
+--------
+Virtual DOM -- collect the data 
+it will check with real DOM
+
+REAL DOM
+1 
+2 
+3
+4
+5
+
+Virtual DOM
+1 
+2
+3
+4
+5
+
+only the difference between real and virtual dom gets updated on browser / real DOM
+
+
+JSX -> Javascript  + XML
+writing html inside of js 
+
+CreateElement 
+
+appendChild
+
+
+1. Single Page Application 
+2. Virtual DOM (updates onlyl difference between it and real DOM)
+3. JSX -> Javascript  + XML
+
