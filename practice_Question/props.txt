@@ -1,0 +1,47 @@
+1. Create an EmployeeCard component that displays:
+    . Employee Name
+    . Employee Department
+
+    Expected Output : 
+    Name: Harsh
+    Department: IT
+
+    Name: Rahul
+    Department: HR
+
+    Name: Priya
+    Department: Sales
+
+2. Create a ProductCard component that displays:
+
+    . Product Name
+    . Price
+    . Brand
+
+    Expected Output :
+    Product: Laptop
+    Price: ₹55000
+    Brand: Dell
+
+    Product: Mobile
+    Price: ₹25000
+    Brand: Samsung
+
+    Product: Headphones
+    Price: ₹3000
+    Brand: Sony
+
+3. Create a StudentCard component that displays:
+
+    . Student Name
+    . Age
+    . Marks
+
+    Expected Output :
+    Name: Harsh
+    Age: 22
+    Marks: 78
+
+    Name: Rahul
+    Age: 20
+    Marks: 25

@@ -1,0 +1,43 @@
+1. create a component named Profile.
+
+    The component should display:
+        Your Name
+        Your College
+        Your Course
+
+    Expected Output
+        Name: Harsh
+        College: Grow More University
+        Course: BCA
+
+2. Create a component named Book.
+
+    The component should display:
+        Book Name
+        Author
+        Price
+
+    Create three Book components in App.jsx with different details.
+
+    Expected Output
+        Book: Rich Dad Poor Dad
+        Author: Robert Kiyosaki
+        Price: ₹499
+
+        Book: Atomic Habits
+        Author: James Clear
+        Price: ₹699
+
+        Book: The Alchemist
+        Author: Paulo Coelho
+        Price: ₹399
+
+    Component Structure
+    App
+    ├── Book
+    ├── Book
+    └── Book
+
+3. Make a hero section component
+    It should contain basic description , image 
+    It should have basic and try to get a good css

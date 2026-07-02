@@ -59,3 +59,60 @@ appendChild
 2. Virtual DOM (updates onlyl difference between it and real DOM)
 3. JSX -> Javascript  + XML
 
+1. React is ______ library      JS, UI
+2. React has ______ DOM         DOM and VDOM
+3. React provides _____ files   .jsx 
+4. React is _____ Page Application Single 
+5. React has ________ features , which helps code reusability    Component
+6. V - DOM helps in ?   re render , lightweight copy of real dom 
+7. With what we can create react project? Name the dependency...   vite 
+8. How to install any dependency?   npm i packageName
+9. write command to install react-router-dom    npm i react-router-dom
+10. To run react project , we need which run time environment?   node js 
+
+11. React Rendering Flow 
+    main.jsx -> ?? -> App.jsx -> ?? -> Browser Screen 
+    create root element 
+    child Component
+
+
+Javascript + HTML -> JSX 
+
+root 
+
+
+1. Server fetch HTML FILE 
+2. Make DOM of HTML File
+3. Parse and apply css 
+4. parse and apply js 
+5. paint the final output on the browser screen 
+
+<===================================================================>
+1. Make Header and Footer component 
+2. Dynamic rendering of navbar based on roles (Header.jsx)
+3. 
+
+
+Props 
+-----
+parent -> child 
+in amazon , when you open product information page , all ui is same for every product , just product specs gets change 
+
+
+
+studentCard 
+------------
+3 student card 
+
+name , age 
+
+
+HW IS GIVEN 
+
+component creation , props , dynamic rendering 
+
+
+<=====================================================>
+Conditional Rendering 
+Map 
+Use State 
