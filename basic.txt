@@ -111,6 +111,9 @@ HW IS GIVEN
 
 component creation , props , dynamic rendering 
 
+<=====================================================>
+props 
+conditional rendering
 
 <=====================================================>
 Conditional Rendering 

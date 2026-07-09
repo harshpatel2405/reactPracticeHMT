@@ -45,3 +45,21 @@
     Name: Rahul
     Age: 20
     Marks: 25
+
+
+    1. i want all data of student table 
+        select * from student;
+
+    2. i want all data of student table where id is 104
+        select * from student where id = 104;
+
+    3. i want all data of student table where name is Harsh
+        select * from student where name ='Harsh';
+
+    4. i want to insert data in student table (id , name)
+    insert into student values(1,'Vasu');
+
+    update from student set id = 105 where id = 104
+
+    delete from student where id = 104
+    delete from student where name = 'Vasu'

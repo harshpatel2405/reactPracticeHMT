@@ -1,52 +1,80 @@
-// import React from 'react'
-import Footer from "./components/Footer";
+//  * Lecture 3
+
 import Header from "./components/Header";
-import ProductCard1 from "./components/ProductCard1";
-import ProductCard2 from "./components/ProductCard2";
-import Studentcard from "./Studentcard";
+import CheckCard from "./components/CheckCard";
+import MapDemo1 from "./components/MapDemo1";
+import MapDemo2 from "./components/mapDemo2";
+import UseStateDemo1 from "./components/useState/useStateDemo1";
 
 const App = () => {
-  const data1 = {
-    name: "Apple",
-    cod: 456456,
-    cost: 789.56,
-    image:
-      "https://img.magnific.com/free-vector/apple-colorful-vector-design_341269-1123.jpg",
-  };
-
-  const data2 = {
-    name: "Orange",
-    cod: 388620,
-    cost: 12.56,
-    image:
-      "https://media.istockphoto.com/id/185284489/photo/orange.jpg?s=612x612&w=0&k=20&c=m4EXknC74i2aYWCbjxbzZ6EtRaJkdSJNtekh4m1PspE=",
-  };
-
   return (
     <>
-      {/* <Header></Header> */}
+      <Header />
+      {/* <CheckCard
+        name="Cherry"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQENE1MBYg9MgwNwWgp5Q-6nglspd-9M5eZIBjSpEGGjmfIAmQxZtOKTKvv&s=10"
+        price = {15.99}
+      /> */}
 
-      {/* <ProductCard1 name="Props Apple" cod = {898989} cost={45.56}/>
-    <ProductCard1 name="Props Orange" cod = {456564} cost={89.98}/> */}
+      {/* <MapDemo1/> */}
+      {/* <MapDemo2/> */}
 
-      {/* <ProductCard1 props={data1}/>
-      <ProductCard1 props={data2}/> */}
-      <ProductCard2/>
-      <ProductCard2/>
-      <ProductCard2/>
-
-      {/* <Studentcard name= "Harsh" age={22}/>
-      <Studentcard name = "vasu" age={23}/>
-      <Studentcard name="dev" age={24}/> */}
-
-      {/* There are three roles  , and each has different nav links   */}
-      {/* <Header />
-      <Footer/> */}
+      <UseStateDemo1 />
     </>
   );
 };
 
 export default App;
+
+// // import React from 'react'
+// import Footer from "./components/Footer";
+// import Header from "./components/Header";
+// import ProductCard1 from "./components/ProductCard1";
+// import ProductCard2 from "./components/ProductCard2";
+// import Studentcard from "./Studentcard";
+
+// const App = () => {
+//   const data1 = {
+//     name: "Apple",
+//     cod: 456456,
+//     cost: 789.56,
+//     image:
+//       "https://img.magnific.com/free-vector/apple-colorful-vector-design_341269-1123.jpg",
+//   };
+
+//   const data2 = {
+//     name: "Orange",
+//     cod: 388620,
+//     cost: 12.56,
+//     image:
+//       "https://media.istockphoto.com/id/185284489/photo/orange.jpg?s=612x612&w=0&k=20&c=m4EXknC74i2aYWCbjxbzZ6EtRaJkdSJNtekh4m1PspE=",
+//   };
+
+//   return (
+//     <>
+//       {/* <Header></Header> */}
+
+//       {/* <ProductCard1 name="Props Apple" cod = {898989} cost={45.56}/>
+//     <ProductCard1 name="Props Orange" cod = {456564} cost={89.98}/> */}
+
+//       {/* <ProductCard1 props={data1}/>
+//       <ProductCard1 props={data2}/> */}
+//       <ProductCard2/>
+//       <ProductCard2/>
+//       <ProductCard2/>
+
+//       {/* <Studentcard name= "Harsh" age={22}/>
+//       <Studentcard name = "vasu" age={23}/>
+//       <Studentcard name="dev" age={24}/> */}
+
+//       {/*  There are three roles  , and each has different nav links   */}
+//       {/* <Header />
+//       <Footer/> */}
+//     </>
+//   );
+// };
+
+// export default App;
 
 // // import statements
 

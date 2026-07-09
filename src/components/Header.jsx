@@ -3,7 +3,7 @@ import './Header.css'
 
 const Header = () => {
     // const isAdmin= confirm("Are you admin ? ");
-    const isAdmin = false
+    const isAdmin = true
   return (
     <div className="topnav" id="topnav">
         <a href="/"> <img id="logo" src="polar-bear.png" style={{"width":"50px"}}/> </a>

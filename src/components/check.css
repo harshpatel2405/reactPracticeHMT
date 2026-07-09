@@ -1,0 +1,44 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Parent container for the list of cards */
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Allows cards to wrap to next line if screen is small */
+    gap: 20px;
+    padding: 20px;
+    justify-content: flex-start; /* Or center/space-between */
+}
+
+/* Individual card styling */
+.box {
+    padding: 15px;
+    border: 2px solid #333;
+    border-radius: 8px; /* Rounded corners for a modern look */
+    min-width: 200px;   Ensures enough space for text
+    background-color: #f9f9f9;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    
+    /* Flex alignment inside the card */
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    gap: 10px;
+}
+
+.box h2 {
+    font-size: 1.2rem;
+}
+
+.box img {
+    border-radius: 4px;
+}
+
+.box h3 {
+    color: #2c3e50;
+    font-size: 1rem;
+}
