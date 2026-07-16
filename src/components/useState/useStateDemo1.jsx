@@ -5,7 +5,7 @@ const UseStateDemo1 = () => {
     // const [state , setState ] = useState(0)
     let [count , setcount ] = useState(0)
 
-      function increaseCounter()
+    function increaseCounter()
     {
         setcount(count+1)
         console.log(count)

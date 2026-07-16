@@ -5,11 +5,13 @@ import CheckCard from "./components/CheckCard";
 import MapDemo1 from "./components/MapDemo1";
 import MapDemo2 from "./components/mapDemo2";
 import UseStateDemo1 from "./components/useState/useStateDemo1";
+import { Route, Routes } from "react-router-dom";
+import PageNotFound from './components/PageNotFound'
 
 const App = () => {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       {/* <CheckCard
         name="Cherry"
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQENE1MBYg9MgwNwWgp5Q-6nglspd-9M5eZIBjSpEGGjmfIAmQxZtOKTKvv&s=10"
@@ -19,7 +21,15 @@ const App = () => {
       {/* <MapDemo1/> */}
       {/* <MapDemo2/> */}
 
-      <UseStateDemo1 />
+      {/* <UseStateDemo1 /> */}
+
+
+      <Routes>
+        <Route path='/home' element={<UseStateDemo1/>}/>
+        <Route path='/' element={<Header/>}/>
+
+        <Route path='*' element = {<PageNotFound/>}/>
+      </Routes>
     </>
   );
 };

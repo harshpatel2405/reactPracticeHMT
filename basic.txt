@@ -119,3 +119,43 @@ conditional rendering
 Conditional Rendering 
 Map 
 Use State 
+
+
+Map + UseState 
+events 
+routing 
+
+
+
+1. What is React? 
+2. What are the features of React? 
+3. How does an HTML website or a website get seen on your browser screen? 
+4. React Rendering Flow. 
+5. What are components in React and how to make one? 
+6. What are props? 
+7. What is map used for? 
+8. What is meant by iterables? 
+9. What is useState used for? 
+10. Why in console everything is printed twice? 
+
+<======================================================>
+routing 
+--------
+1. npm i react-router-dom 
+2. import {BrowserRouter} from 'react-router-dom';   // in main.jsx
+3. wrap App Component in BrowserRouter Component    //  in main.jsx
+
+4. call Routes component in app.jsx
+5. inside Routes make route Component
+
+6. <Route path='/path' element = {<ComponentName/>} />
+
+7. Link 
+<Link to='/path' >
+
+8. for not found page path is *
+
+1. Error Page 
+2. Contact Us Page 
+3. About Us Page
+
