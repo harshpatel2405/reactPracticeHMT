@@ -1,0 +1,98 @@
+1. Toggle Light/Dark Mode ⭐
+Create a button that switches between Light Mode and Dark Mode.
+Requirements
+    Initial mode: Light
+    Button text:
+    "Dark Mode" when light theme is active
+    "Light Mode" when dark theme is active
+    Change:
+    Background color
+    Text color
+
+Example
+
+Before
+
+Background : White
+Text : Black
+Button : Dark Mode
+
+Click Button
+
+Background : Black
+Text : White
+Button : Light Mode
+
+<===================================================================>
+2. Show / Hide Text 👀
+Display a paragraph with a button to show or hide it.
+
+Requirements
+Initially
+This is React Practice.
+
+    [Hide]
+
+    After Click
+
+    [Show]  (text is hidden)
+
+    Click Again
+
+    This is React Practice.
+
+    [Hide] 
+<=====================================================================>
+3. Increase Font Size 🔠
+Increase the font size of a paragraph.
+
+    Requirements
+
+    Initial
+
+    Font Size : 16px
+
+    Buttons
+
+    Increase
+    Decrease
+    Reset
+
+    Rules
+
+    Increase → +2px
+    Decrease → -2px
+    Minimum → 12px
+    Maximum → 40px
+    Reset → 16px
+<==============================================================>
+4. Like Button ❤️
+Create a Like button.
+
+Requirements
+
+    Initially
+
+    🤍 Like
+
+    Click
+
+    ❤️ Liked
+
+    Click Again
+
+    🤍 Like
+    Bonus
+
+    Display total likes.
+
+    ❤️ Liked
+
+    Likes : 1
+
+    Unlike
+
+    🤍 Like
+
+    Likes : 0
+<========================================================================>

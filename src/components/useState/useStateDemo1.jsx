@@ -1,23 +1,41 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 
-const UseStateDemo1 = () => {
+const useStateDemo1 = () => {
+  const [count, setcount] = useState(0);
 
-    // const [state , setState ] = useState(0)
-    let [count , setcount ] = useState(0)
-
-    function increaseCounter()
-    {
-        setcount(count+1)
-        console.log(count)
-    }
+  function IncrementValue() {
+    setcount(count + 1);
+  }
+  function DecrementValue() {
+    setcount(count - 1);
+  }
+  function ResetValue() {
+    setcount(0);
+  }
 
   return (
     <div>
-        <h1>Count = {count}</h1>
-
-        <button onClick={increaseCounter} type="button" class="btn btn-primary">Increase Count</button>
+      <center>
+        <h1>Use State Demo 1</h1>
+     
+      <h1>Count : {count}</h1>
+      <button onClick={IncrementValue} className="btn btn-primary">
+        Increment
+      </button>
+      <button onClick={DecrementValue} className="btn btn-primary">
+        Decrement
+      </button>
+      <button onClick={ResetValue} className="btn btn-primary">
+        Reset
+      </button>
+       </center>
     </div>
-  )
-}
+  );
+};
 
-export default UseStateDemo1
+export default useStateDemo1;
+
+
+// onclick 
+// function 
+// useState

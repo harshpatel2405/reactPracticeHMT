@@ -1,4 +1,5 @@
 // import React from "react";
+import { Link } from 'react-router-dom';
 import './Header.css'
 
 const Header = () => {
@@ -9,27 +10,15 @@ const Header = () => {
         <a href="/"> <img id="logo" src="polar-bear.png" style={{"width":"50px"}}/> </a>
         {isAdmin ? <span>Admin</span> :  <span>User</span> }
        
-        <nav>
-            {
-            isAdmin ? 
+        <nav> 
             <ul>
 
-                <li className="page" id="hover" style={{"float" : "right"}}><a href="#">Dashboard</a></li>
-                <li className="page" id="hover" style={{"float" : "right"}}><a href="#">Reports</a></li>
-                <li className="page" id="hover" style={{"float" : "right"}}><a href="#">Profile</a></li>
-                <li className="btn" id="hover" style={{"float" : "right"}}><a href="#">Log out</a></li>
+                <Link className="page" id="hover" style={{"float" : "right"}} to='/useStateDemo1'>Use 1</Link>
+                <Link className="page" id="hover" style={{"float" : "right"}} to='/useStateDemo2'>Use 2</Link>
+                <Link className="page" id="hover" style={{"float" : "right"}} to='/useStateDemo3'>Use 3</Link>
 
             </ul>
-             : 
-             <ul>
-
-                <li className="page" id="hover" style={{"float" : "right"}}><a href="#">Home</a></li>
-                <li className="page" id="hover" style={{"float" : "right"}}><a href="#">About us</a></li>
-                <li className="page" id="hover" style={{"float" : "right"}}><a href="#">Contact us </a></li>
-                <li className="btn" id="hover" style={{"float" : "right"}}><a href="#">Sign Out</a></li>
-
-            </ul>
-            }            
+                     
         </nav>
     </div>
   );

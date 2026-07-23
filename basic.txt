@@ -159,3 +159,62 @@ routing
 2. Contact Us Page 
 3. About Us Page
 
+
+<===================================================================>
+1. React Basics
+    a. setup of react 
+        I. npm create vite (project name + react + Javascript)
+    b. react features 
+        I. JSX (html + JS Combined)
+        II. Component Feature (reusability)
+        III. Virtual Dom (lightweight copy of Real DOM) (updates only the changes between real and V Dom)
+        IV. For developing UI Part of any Application
+
+2. Component  (reusability)
+    a. make component
+        I. File will be created -> component will be exported
+    b. call component  (can be called anywhere)
+        I. <ComponentName/>
+
+3. Props
+    I. For Exchange of data between two different files 
+
+4. Conditional Rendering 
+    I. OutPut is presented on screen as per the condition
+
+5. Use State 
+    I. hold the past value
+
+6. Map 
+    I. iterate over all the values (object, array)
+7. Routing 
+    I. for providing path on a website 
+    II. each path opens a required page as per the user click
+
+<==============================================================>
+Props
+PASSING DATA FROM COMPONENT CALLING 
+
+<component data = "value" data2 = {value2}> this is a string 
+<component data = {value}> this is a variable holding data 
+
+variable can be holding any data 
+number , string , array , object 
+
+component Page 
+--------------
+(props) --> any other name can be used as well
+props.data
+
+props.data[]
+
+
+ROUTING 
+
+1. npm i react-router-dom
+2. import BrowserRouter in main.jsx 
+3. Wrap app component in BrowserRouter
+4. In app.jsx , create routes tag
+5. inside routes create route tag for number of paths to add
+6. route -> path , element 
+7. path = '*'
