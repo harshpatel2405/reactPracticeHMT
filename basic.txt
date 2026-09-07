@@ -218,3 +218,7 @@ ROUTING
 5. inside routes create route tag for number of paths to add
 6. route -> path , element 
 7. path = '*'
+
+<================================================================>
+Task : make a component named Student and print details of student in the component and call that component in app.jsx 
+    2. implement same functionality uising routing

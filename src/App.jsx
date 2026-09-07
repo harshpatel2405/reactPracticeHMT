@@ -1,109 +1,160 @@
-//  * Lecture 3
-
-import Header from "./components/Header";
-import CheckCard from "./components/CheckCard";
-import MapDemo1 from "./components/MapDemo1";
-import MapDemo2 from "./components/mapDemo2";
+import { Routes, Route } from "react-router-dom";
 import UseStateDemo1 from "./components/useState/useStateDemo1";
-import { Route, Routes } from "react-router-dom";
-import PageNotFound from "./components/PageNotFound";
-import StudentProfileCard from "./components/StudentProfileCard";
-import UsersProfileCard from "./components/UsersProfileCard";
-import './App.css'
-import Card from "./components/props/Card";
 import UseStateDemo2 from "./components/useState/UseStateDemo2";
 import UseStateDemo3 from "./components/useState/UseStateDemo3";
+import StudentDetails from "./components/StudentDetails";
+import PageNotFound from "./components/PageNotFound";
+import MovieCard from "./components/MovieCard";
+import UseStateDemo4 from "./components/useState/useStateDemo4";
+import Header from "./components/Header";
+import UseStateDemo5 from "./components/useState/UseStateDemo5";
+import FormDemo1 from "./components/forms/FormDemo1";
+import FormDemo2 from "./components/forms/FormDemo2";
+import FormDemo3 from "./components/forms/FormDemo3";
+import HookForm1 from "./components/forms/HookForm1";
+import HookForm2 from "./components/forms/HookForm2";
+import UseEffectDemo1 from "./components/useEffect/UseEffectDemo1";
+import USeEffectDemo2 from "./components/useEffect/USeEffectDemo2";
+import UseEffectDemo3 from "./components/useEffect/UseEffectDemo3";
+import AddExpense from "./components/expenseTracker/AddExpense";
 
 const App = () => {
-  const data = [
-    {
-      name: "Harsh Patel",
-      rollNumber: 56,
-      sem: 7,
-      cgpa: 9.8,
-      dept: "IT",
-    },
-    {
-      name: "Shyam Kanbar",
-      rollNumber: 121,
-      sem: 6,
-      cgpa: 6.8,
-      dept: "MBA",
-    },
-    {
-      name: "Sujal Varma",
-      rollNumber: 561,
-      sem: 8,
-      cgpa: 8.7,
-      dept: "Mechanical",
-    },
-  ];
-
-  const user = 
-    {
-      img : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKhdsa_nI0ZfAr_gF1KoPURLXmpjk90dWgN_T8R3yD7g&s",
-      name :  "Virat Kohli",
-      age : 39,
-      occupation : "Cricketer",
-      height: 175,
-      weight: 75,
-    }
-  
-
-    const newData = [10, 20 , 30 , 40]
   return (
-    <>
-      <Header />
+    <div>
       <Routes>
-        <Route path='/useStateDemo1' element={<UseStateDemo1/>}/>
-        <Route path='/useStateDemo2' element={<UseStateDemo2/>}/>
-        <Route path='/useStateDemo3' element={<UseStateDemo3/>}/>
+        <Route path="/add-expense" element={<AddExpense />} />
       </Routes>
-      {/* <Card data = {data}/> */}
-      {/* <CheckCard
-        name="Cherry"
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQENE1MBYg9MgwNwWgp5Q-6nglspd-9M5eZIBjSpEGGjmfIAmQxZtOKTKvv&s=10"
-        price = {15.99}
-      /> */}
+      {/* <UseEffectDemo1/> */}
+      {/* <USeEffectDemo2/> */}
+      {/* <UseEffectDemo3/> */}
 
-      {/* <MapDemo1/> */}
-      {/* <MapDemo2/> */}
-
-      {/* <UseStateDemo1 /> */}
-
-      {/* <StudentProfileCard studentName = "Harsh" rollNumber = {141} dept = 'IT' sem ={7} cgpa = {8.8}/>
-        <StudentProfileCard studentName = "Harsh" rollNumber = {141} dept = 'IT' sem ={7} cgpa = {8.8}/>
-        <StudentProfileCard studentName = "Harsh" rollNumber = {141} dept = 'IT' sem ={7} cgpa = {8.8}/>
-        <StudentProfileCard studentName = "Harsh" rollNumber = {141} dept = 'IT' sem ={7} cgpa = {8.8}/> */}
-        {/* 
-        * data is array 
-        * map -> will return us one object at a time 
-        * 
-         */}
-      {/* {data.map((d) => {
-        return <StudentProfileCard key={d.rollNumber} d  = {d}/>;
-      })} */}
-
-{/* <div className="profile-container">
-    <UsersProfileCard data = {user}/>
-    {/* <UsersProfileCard />
-    <UsersProfileCard />
-    <UsersProfileCard /> 
-</div> */}
-      {/* <Routes>
-        <Route path="/home" element={<UseStateDemo1 />} />
-        <Route path="/" element={<Header />} />
-        {/* <Route path='/studentCard' element = {<StudentProfileCard/>}/> 
-
+      {/* <HookForm1/> */}
+      {/* <HookForm2/> */}
+      {/* <Header/>
+      <Routes>
+        <Route path="/studentDetails" element={<StudentDetails />} />
+        <Route path="/movieCard" element={<MovieCard />} />
+        <Route path="/useStateDemo1" element={<UseStateDemo1 />} />
+        <Route path="/useStateDemo2" element={<UseStateDemo2 />} />
+        <Route path="/useStateDemo3" element={<UseStateDemo3 />} />
+        <Route path="/useStateDemo4" element={<UseStateDemo4 />} />
+        <Route path="/useStateDemo5" element={<UseStateDemo5 />} />
+        <Route path="/formdemo1" element={<FormDemo1/>} />
+        <Route path="/formdemo2" element={<FormDemo2/>} />
+        <Route path="/formdemo3" element={<FormDemo3/>} />
         <Route path="*" element={<PageNotFound />} />
       </Routes> */}
-    </>
+    </div>
   );
 };
 
 export default App;
 
+//  * Lecture 3
 
+// import Header from "./components/Header";
+// import CheckCard from "./components/CheckCard";
+// import MapDemo1 from "./components/MapDemo1";
+// import MapDemo2 from "./components/mapDemo2";
+// import { Route, Routes } from "react-router-dom";
+// import PageNotFound from "./components/PageNotFound";
+// import StudentProfileCard from "./components/StudentProfileCard";
+// import UsersProfileCard from "./components/UsersProfileCard";
+// // import './App.css'
+// import UseStateDemo1 from "./components/useState/useStateDemo1";
+// import UseStateDemo2 from "./components/useState/UseStateDemo2";
+// import UseStateDemo3 from "./components/useState/UseStateDemo3";
+// import Card from "./components/props/Card";
+// import StudentDetails from "./components/StudentDetails";
+
+// const App = () => {
+//   const data = [
+//     {
+//       name: "Harsh Patel",
+//       rollNumber: 56,
+//       sem: 7,
+//       cgpa: 9.8,
+//       dept: "IT",
+//     },
+//     {
+//       name: "Shyam Kanbar",
+//       rollNumber: 121,
+//       sem: 6,
+//       cgpa: 6.8,
+//       dept: "MBA",
+//     },
+//     {
+//       name: "Sujal Varma",
+//       rollNumber: 561,
+//       sem: 8,
+//       cgpa: 8.7,
+//       dept: "Mechanical",
+//     },
+//   ];
+
+//   const user =
+//     {
+//       img : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKhdsa_nI0ZfAr_gF1KoPURLXmpjk90dWgN_T8R3yD7g&s",
+//       name :  "Virat Kohli",
+//       age : 39,
+//       occupation : "Cricketer",
+//       height: 175,
+//       weight: 75,
+//     }
+
+//     const newData = [10, 20 , 30 , 40]
+//   return (
+//     <>
+//       {/* <Header /> */}
+//       <StudentDetails/>
+//       {/* <Routes>
+//         <Route path='/useStateDemo1' element={<UseStateDemo1/>}/>
+//         <Route path='/useStateDemo2' element={<UseStateDemo2/>}/>
+//         <Route path='/useStateDemo3' element={<UseStateDemo3/>}/>
+//       </Routes> */}
+//       {/* <Card data = {data}/> */}
+//       {/* <CheckCard
+//         name="Cherry"
+//         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQENE1MBYg9MgwNwWgp5Q-6nglspd-9M5eZIBjSpEGGjmfIAmQxZtOKTKvv&s=10"
+//         price = {15.99}
+//       /> */}
+
+//       {/* <MapDemo1/> */}
+//       {/* <MapDemo2/> */}
+
+//       {/* <UseStateDemo1 /> */}
+
+//       {/* <StudentProfileCard studentName = "Harsh" rollNumber = {141} dept = 'IT' sem ={7} cgpa = {8.8}/>
+//         <StudentProfileCard studentName = "Harsh" rollNumber = {141} dept = 'IT' sem ={7} cgpa = {8.8}/>
+//         <StudentProfileCard studentName = "Harsh" rollNumber = {141} dept = 'IT' sem ={7} cgpa = {8.8}/>
+//         <StudentProfileCard studentName = "Harsh" rollNumber = {141} dept = 'IT' sem ={7} cgpa = {8.8}/> */}
+//         {/*
+//         * data is array
+//         * map -> will return us one object at a time
+//         *
+//          */}
+//       {/* {data.map((d) => {
+//         return <StudentProfileCard key={d.rollNumber} d  = {d}/>;
+//       })} */}
+
+// {/* <div className="profile-container">
+//     <UsersProfileCard data = {user}/>
+//     {/* <UsersProfileCard />
+//     <UsersProfileCard />
+//     <UsersProfileCard />
+// </div> */}
+//       {/* <Routes>
+//         <Route path="/home" element={<UseStateDemo1 />} />
+//         <Route path="/" element={<Header />} />
+//         {/* <Route path='/studentCard' element = {<StudentProfileCard/>}/>
+
+//         <Route path="*" element={<PageNotFound />} />
+//       </Routes> */}
+//     </>
+//   );
+// };
+
+// export default App;
 
 // // import React from 'react'
 // import Footer from "./components/Footer";

@@ -1,0 +1,184 @@
+/* ================================
+   LOADER CONTAINER
+================================ */
+
+.loader-container {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+/* ================================
+   TERMINAL LOADER
+================================ */
+
+.terminal-loader {
+  border: 1px solid #333;
+  background-color: #1a1a1a;
+  color: #0f0;
+
+  font-family: "Courier New", Courier, monospace;
+  font-size: 16px;
+
+  width: 280px;
+  max-width: 90%;
+
+  padding: 24px 16px 16px;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+
+  border-radius: 6px;
+
+  position: relative;
+  overflow: hidden;
+
+  box-sizing: border-box;
+}
+
+
+/* ================================
+   TERMINAL HEADER
+================================ */
+
+.terminal-header {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 24px;
+
+  background-color: #333;
+
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+
+  padding: 0 8px;
+
+  box-sizing: border-box;
+}
+
+
+/* ================================
+   TERMINAL TITLE
+================================ */
+
+.terminal-title {
+  float: left;
+
+  line-height: 24px;
+
+  color: #eee;
+
+  font-size: 13px;
+}
+
+
+/* ================================
+   TERMINAL CONTROLS
+================================ */
+
+.terminal-controls {
+  float: right;
+}
+
+.control {
+  display: inline-block;
+
+  width: 8px;
+  height: 8px;
+
+  margin-left: 5px;
+
+  border-radius: 50%;
+
+  background-color: #777;
+}
+
+.control.close {
+  background-color: #e33;
+}
+
+.control.minimize {
+  background-color: #ee0;
+}
+
+.control.maximize {
+  background-color: #0b0;
+}
+
+
+/* ================================
+   CURSOR ANIMATION
+================================ */
+
+@keyframes blinkCursor {
+  50% {
+    border-right-color: transparent;
+  }
+}
+
+
+/* ================================
+   TYPING ANIMATION
+================================ */
+
+@keyframes typeAndDelete {
+
+  0%,
+  10% {
+    width: 0;
+  }
+
+  45%,
+  55% {
+    width: 6.2em;
+  }
+
+  90%,
+  100% {
+    width: 0;
+  }
+}
+
+
+/* ================================
+   LOADING TEXT
+================================ */
+
+.text {
+  display: inline-block;
+
+  white-space: nowrap;
+  overflow: hidden;
+
+  border-right: 3px solid #0f0;
+
+  margin-top: 4px;
+
+  animation:
+    typeAndDelete 4s steps(11) infinite,
+    blinkCursor 0.5s step-end infinite alternate;
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 500px) {
+
+  .terminal-loader {
+    width: 240px;
+    font-size: 14px;
+  }
+
+}

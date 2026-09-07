@@ -1,0 +1,20 @@
+.light-theme
+{
+    background-color: white;
+    width : 400px;
+    height:300px;
+    border : 1px solid yellowgreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dark-theme
+{
+    background-color: rgb(0, 0, 0);
+    width : 400px;
+    height:300px;
+    border : 1px solid yellowgreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

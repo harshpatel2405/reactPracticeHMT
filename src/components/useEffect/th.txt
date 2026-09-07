@@ -1,0 +1,3 @@
+Use Effect 
+----------
+If we need to perform any specific activity after react is rendered

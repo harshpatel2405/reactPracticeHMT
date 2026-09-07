@@ -1,0 +1,67 @@
+React Practical Question – Expense Tracker
+
+Create a simple Expense Tracker using React.
+
+Requirements:
+
+1. Create an "/Add Expense" page with the route:
+   /add-expense
+
+2. Create a form with:
+   - Expense Title
+   - Amount
+   - Add Expense button
+
+3. Use useState to:
+   - Store the title and amount.
+   
+   - Store the list of expenses.
+4. When the user submits the form:
+   - Prevent the page from refreshing.
+   - Create an expense object with id, title, and amount.
+   - Add it to the expense list.
+   - Clear the form after submission.
+
+5. Create an "Expenses" page with the route:
+   /expenses
+
+6. Display all added expenses on the Expenses page.
+
+7. Create a separate ExpenseCard component.
+   Pass each expense from the Expenses component to ExpenseCard using props.
+
+8. Use useEffect to calculate the total expense whenever the expense list changes.
+
+9. Display the total expense at the bottom of the Expenses page.
+
+10. If there are no expenses, display:
+    "No expenses added yet."
+
+11. Use React Router to create these routes:
+    /expenses      → Expenses Page
+    /add-expense   → Add Expense Page
+
+12. Add navigation links/buttons to move between:
+    Expenses
+    Add Expense
+
+Example:
+
+Expense Title: Food
+Amount: 250
+
+After adding:
+
+Food       ₹250
+Travel     ₹100
+Shopping   ₹500
+
+Total Expense: ₹850
+
+Concepts that must be used:
+- useState
+- useEffect
+- Forms
+- Props
+- React Router
+- Components
