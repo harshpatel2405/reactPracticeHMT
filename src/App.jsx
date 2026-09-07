@@ -17,12 +17,23 @@ import UseEffectDemo1 from "./components/useEffect/UseEffectDemo1";
 import USeEffectDemo2 from "./components/useEffect/USeEffectDemo2";
 import UseEffectDemo3 from "./components/useEffect/UseEffectDemo3";
 import AddExpense from "./components/expenseTracker/AddExpense";
+import Expense from "./components/expenseTracker/Expense";
+import { useState } from "react";
 
 const App = () => {
+  const [expense, setExpense] = useState([]);
+  
+  console.log(expense);
   return (
     <div>
       <Routes>
-        <Route path="/add-expense" element={<AddExpense />} />
+        <Route
+          path="/add-expense"
+          element={<AddExpense setExpense={setExpense} />}
+        />
+        <Route 
+        path="/expense" 
+        element={<Expense expense={expense} />} />
       </Routes>
       {/* <UseEffectDemo1/> */}
       {/* <USeEffectDemo2/> */}

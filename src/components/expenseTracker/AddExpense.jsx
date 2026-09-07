@@ -1,28 +1,18 @@
-import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
 
-const AddExpense = () => {
+const AddExpense = ({ setExpense }) => {
   const { register, handleSubmit, reset } = useForm();
-  const [title, setTitle] = useState("");
-  const [amount, setAmount] = useState("");
-
-  const [expense, setExpense] = useState([]);
 
   const addExpense = (data) => {
-    setTitle(data.title);
-    setAmount(data.amount);
-    console.log(title);
-    console.log(amount);
-
     const newExpense = {
       id: Date.now(),
       title: data.title,
       amount: data.amount,
     };
 
-    setExpense([...expense, newExpense]);
-
-    console.log(expense);
+    setExpense((prev) => [...prev, newExpense]);
+    
 
     reset();
   };
@@ -52,6 +42,8 @@ const AddExpense = () => {
         <br />
         <button type="submit">Add Expense</button>
       </form>
+
+      <Link to="/expense">Go to Expense Page</Link>
     </div>
   );
 };
