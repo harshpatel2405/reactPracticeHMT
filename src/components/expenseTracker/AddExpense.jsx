@@ -8,6 +8,7 @@ const AddExpense = ({ setExpense }) => {
     const newExpense = {
       id: Date.now(),
       title: data.title,
+      category:data.category,
       amount: data.amount,
     };
 
@@ -38,6 +39,16 @@ const AddExpense = ({ setExpense }) => {
           required
           min="50"
         />
+
+<br></br>
+        <label>category</label>
+        <select>
+          <option name="category" value="food">Food</option>
+          <option name="category" value="fuel">Fuel</option>
+          <option name="category" value="travel">Travel</option>
+          <option name="category" value="entertainment">Entertainment</option>
+          <option name="category" value="miscellaneous">Miscellaneous</option>
+        </select>
 
         <br />
         <button type="submit">Add Expense</button>

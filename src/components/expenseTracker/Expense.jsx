@@ -2,16 +2,21 @@ import React, { useEffect, useState } from "react";
 
 const Expense = ({ expense, setExpense }) => {
   const [totalExpense, setTotalExpense] = useState(0);
+  const [search, setSearch] = useState("");
+
+  const filteredExpense = expense.filter((exp) =>
+    exp.title.toLowerCase().includes(search.toLowerCase()),
+  );
 
   useEffect(() => {
     let total = 0;
 
-    expense.forEach((exp) => {
+    filteredExpense.forEach((exp) => {
       total += Number(exp.amount);
     });
 
     setTotalExpense(total);
-  }, [expense]);
+  }, [filteredExpense]);
 
   const deleteExpense = (id) => {
     setExpense((prev) => prev.filter((exp) => exp.id != id));
@@ -22,8 +27,14 @@ const Expense = ({ expense, setExpense }) => {
   return (
     <div>
       <h1>Expense Page</h1>
+      <input
+        type="text"
+        placeholder="Enter title to search "
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+      />
 
-      <h5>Data : {expense.length}</h5>
+      <h5>Showing : {filteredExpense.length}/{expense.length}</h5>
 
       {expense.length === 0 ? (
         <p>No Expenses are there</p>
@@ -40,7 +51,7 @@ const Expense = ({ expense, setExpense }) => {
           </thead>
 
           <tbody>
-            {expense.map((exp) => (
+            {filteredExpense.map((exp) => (
               <tr key={exp.id}>
                 <td>{index++}</td>
                 <td>{exp.id}</td>
@@ -73,3 +84,6 @@ export default Expense;
 // src/components/expense/expense.jsx
 // src/components/expense/AddExpense.jsx
 // src/app.jsx
+
+
+// * tag based searching , date based searching , 
