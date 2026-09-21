@@ -33,7 +33,7 @@ const App = () => {
         />
         <Route 
         path="/expense" 
-        element={<Expense expense={expense} />} />
+        element={<Expense expense={expense}  setExpense={setExpense}/>} />
       </Routes>
       {/* <UseEffectDemo1/> */}
       {/* <USeEffectDemo2/> */}
