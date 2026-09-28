@@ -1,42 +1,65 @@
-import { Routes, Route } from "react-router-dom";
-import AddExpense from "./components/expenseTracker/AddExpense";
-import Expense from "./components/expenseTracker/Expense";
-import { useState, React } from "react";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import React, { useContext } from "react";
+import ContextDemo1 from './components/context/ContextDemo1.jsx';
+import { UserContext } from "./components/context/UserContext.jsx";
 
 const App = () => {
-  const [expense, setExpense] = useState([]);
-
-  console.log(expense);
+  
   return (
-    <div>
-      <Routes>
-        <Route
-          path="/add-expense"
-          element={<AddExpense setExpense={setExpense} />}
-        />
-        <Route
-          path="/expense"
-          element={<Expense expense={expense} setExpense={setExpense} />}
-        />
-      </Routes>
-
-      <ToastContainer position="top-center" autoClose={1000} />
-      {/* 
-      top-right
-top-center
-top-left
-
-bottom-right
-bottom-center
-bottom-left
- */}
-    </div>
+    <UserContext.Provider value='demo'>
+      <Home />
+      <ContextDemo1/>
+    </UserContext.Provider>
   );
 };
 
+const Home =()=>{
+  const name = useContext(UserContext);
+  return (
+    <h1>Name : {name}</h1>
+  )
+}
+
 export default App;
+
+// import { Routes, Route } from "react-router-dom";
+// import AddExpense from "./components/expenseTracker/AddExpense";
+// import Expense from "./components/expenseTracker/Expense";
+// import { useState, React } from "react";
+// import { ToastContainer, toast } from "react-toastify";
+// import "react-toastify/dist/ReactToastify.css";
+
+// const App = () => {
+//   const [expense, setExpense] = useState([]);
+
+//   console.log(expense);
+//   return (
+//     <div>
+//       <Routes>
+//         <Route
+//           path="/add-expense"
+//           element={<AddExpense setExpense={setExpense} />}
+//         />
+//         <Route
+//           path="/expense"
+//           element={<Expense expense={expense} setExpense={setExpense} />}
+//         />
+//       </Routes>
+
+//       <ToastContainer position="top-center" autoClose={1000} />
+//       {/*
+//       top-right
+// top-center
+// top-left
+
+// bottom-right
+// bottom-center
+// bottom-left
+//  */}
+//     </div>
+//   );
+// };
+
+// export default App;
 
 // import UseStateDemo1 from "./components/useState/useStateDemo1";
 // import UseStateDemo2 from "./components/useState/UseStateDemo2";

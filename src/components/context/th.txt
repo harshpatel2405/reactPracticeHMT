@@ -1,0 +1,11 @@
+Context 
+-------
+share data between components without props 
+
+Without Context 
+parent ->props ->child ->props ->grandchild
+
+
+    context 
+  /   |    \
+par  child  grandchild

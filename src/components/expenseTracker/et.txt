@@ -1,0 +1,760 @@
+PERSONAL FINANCE TRACKER
+========================
+
+1. EXPENSE MANAGEMENT
+---------------------
+- Add Expense
+- Edit Expense
+- Delete Expense
+- View Expense Details
+- Expense Title
+- Amount
+- Category
+- Date
+- Payment Method
+- Description
+- Tags
+
+Expense Categories:
+- Food
+- Fuel
+- Travel
+- Shopping
+- Entertainment
+- Rent
+- Bills
+- Education
+- Health
+- Subscriptions
+- Family
+- Miscellaneous
+
+Payment Methods:
+- Cash
+- UPI
+- Credit Card
+- Debit Card
+- Net Banking
+- Other
+
+
+2. SEARCH & FILTER
+------------------
+- Search by Expense Title
+- Search by Description
+- Search by Category
+- Search by Tags
+
+Filters:
+- Category
+- Payment Method
+- Date
+- Amount
+
+Date Filters:
+- Today
+- Yesterday
+- This Week
+- This Month
+- Last Month
+- Custom Date Range
+
+Amount Filters:
+- Below ₹500
+- ₹500 - ₹1,000
+- ₹1,000 - ₹5,000
+- Above ₹5,000
+
+Multiple filters should work together.
+
+
+3. SORTING
+----------
+- Newest First
+- Oldest First
+- Amount: Low to High
+- Amount: High to Low
+- Title: A to Z
+- Title: Z to A
+
+
+4. DASHBOARD
+------------
+Display:
+
+- Total Income
+- Total Expenses
+- Current Balance
+- This Month Spending
+- Average Expense
+- Highest Expense
+- Number of Transactions
+
+Balance:
+
+Balance = Total Income - Total Expenses
+
+
+5. INCOME MANAGEMENT
+--------------------
+Allow users to add income.
+
+Income Fields:
+- Title
+- Amount
+- Category
+- Date
+- Description
+
+Income Categories:
+- Salary
+- Freelancing
+- Tuition
+- Bonus
+- Business
+- Investment
+- Other
+
+
+6. BUDGET MANAGEMENT
+--------------------
+Allow users to create a monthly budget.
+
+Example:
+
+Monthly Budget = ₹30,000
+Spent = ₹22,000
+Remaining = ₹8,000
+
+Display:
+
+- Total Budget
+- Total Spent
+- Remaining Budget
+- Percentage Used
+- Progress Bar
+
+Budget Alerts:
+- 80% Budget Used
+- 100% Budget Used
+- Budget Exceeded
+
+
+7. REPORTS
+----------
+Create financial reports.
+
+Reports:
+
+- Daily Expenses
+- Weekly Expenses
+- Monthly Expenses
+- Category-wise Expenses
+- Payment Method-wise Expenses
+- Income vs Expense
+- Highest Expenses
+- Lowest Expenses
+
+
+8. CHARTS
+---------
+Add charts for visualization.
+
+Charts:
+
+- Category-wise Expense Pie Chart
+- Monthly Expense Bar Chart
+- Monthly Expense Line Chart
+- Income vs Expense Chart
+- Payment Method Chart
+- Budget Usage Chart
+
+
+9. TAG SYSTEM
+-------------
+Allow users to add tags.
+
+Example Tags:
+
+#personal
+#office
+#college
+#family
+#travel
+#shopping
+#food
+#education
+
+Features:
+
+- Add Tags
+- Search by Tag
+- Filter by Tag
+- Multiple Tags
+
+
+10. RECURRING EXPENSES
+----------------------
+Support recurring expenses.
+
+Examples:
+
+- Rent
+- Electricity
+- Internet
+- Netflix
+- Spotify
+- Gym
+- Insurance
+- Subscriptions
+
+Fields:
+
+- Recurring: Yes / No
+- Frequency:
+  - Daily
+  - Weekly
+  - Monthly
+  - Yearly
+
+
+11. NOTIFICATIONS
+-----------------
+Use React Toastify.
+
+Success:
+- Expense Added Successfully
+- Expense Updated Successfully
+- Expense Deleted Successfully
+- Income Added Successfully
+
+Warnings:
+- Budget 80% Used
+- Budget Exceeded
+
+Errors:
+- Invalid Amount
+- Required Field Missing
+- Something Went Wrong
+
+
+12. LOCAL STORAGE
+-----------------
+Save expenses in localStorage.
+
+Save:
+
+- Expenses
+- Income
+- Budget
+- Categories
+- Settings
+
+Example:
+
+localStorage.setItem(
+    "expenses",
+    JSON.stringify(expenses)
+);
+
+Load:
+
+const savedExpenses =
+    localStorage.getItem("expenses");
+
+const expenses =
+    savedExpenses
+        ? JSON.parse(savedExpenses)
+        : [];
+
+
+13. DARK MODE
+-------------
+Add:
+
+- Light Mode
+- Dark Mode
+
+Allow user to switch between modes.
+
+Save selected theme in localStorage.
+
+
+14. EXPORT DATA
+--------------
+Allow users to export financial data.
+
+Export formats:
+
+- CSV
+- JSON
+
+Example:
+
+expenses.csv
+
+
+15. REACT ROUTER
+---------------
+Create separate pages.
+
+Routes:
+
+/
+    Dashboard
+
+/expenses
+    Expense List
+
+/add-expense
+    Add Expense
+
+/income
+    Income Management
+
+/budget
+    Budget Management
+
+/reports
+    Reports
+
+/settings
+    Settings
+
+
+16. CONTEXT API
+---------------
+Initially:
+
+App
+ |
+ +-- AddExpense
+ |
+ +-- Expense
+ |
+ +-- Dashboard
+
+Later convert to:
+
+ExpenseContext
+      |
+      +-- AddExpense
+      |
+      +-- Expense
+      |
+      +-- Dashboard
+      |
+      +-- Reports
+
+Context should manage:
+
+- Expenses
+- Income
+- Budget
+- Add Expense
+- Update Expense
+- Delete Expense
+- Add Income
+- Delete Income
+
+
+17. CUSTOM HOOKS
+----------------
+Create reusable hooks.
+
+Example:
+
+useExpenses()
+useIncome()
+useBudget()
+useLocalStorage()
+
+
+Example:
+
+const {
+    expenses,
+    addExpense,
+    updateExpense,
+    deleteExpense
+} = useExpenses();
+
+
+18. API INTEGRATION
+-------------------
+After completing localStorage:
+
+React
+  ↓
+Axios / Fetch
+  ↓
+Express API
+  ↓
+MongoDB
+
+
+API examples:
+
+POST
+/api/expenses
+
+GET
+/api/expenses
+
+GET
+/api/expenses/:id
+
+PUT
+/api/expenses/:id
+
+DELETE
+/api/expenses/:id
+
+
+19. BACKEND
+-----------
+Use:
+
+Node.js
+Express.js
+MongoDB
+
+Create:
+
+User Model
+Expense Model
+Income Model
+Budget Model
+Category Model
+
+
+20. AUTHENTICATION
+------------------
+Create:
+
+- Register
+- Login
+- Logout
+- Forgot Password
+- Reset Password
+
+Authentication:
+
+- JWT
+- HTTP-only Cookies
+
+Protected Routes:
+
+/dashboard
+/expenses
+/add-expense
+/income
+/budget
+/reports
+
+
+21. USER-SPECIFIC DATA
+----------------------
+Each user should only see their own data.
+
+Example:
+
+User A
+  ↓
+Own Expenses
+Own Income
+Own Budget
+
+User B
+  ↓
+Own Expenses
+Own Income
+Own Budget
+
+
+22. FINAL PROJECT STRUCTURE
+---------------------------
+
+PERSONAL FINANCE TRACKER
+
+|
++-- Dashboard
+|     |
+|     +-- Total Income
+|     +-- Total Expenses
+|     +-- Balance
+|     +-- Monthly Spending
+|     +-- Average Expense
+|     +-- Highest Expense
+|     +-- Charts
+|
++-- Expenses
+|     |
+|     +-- Add
+|     +-- View
+|     +-- Edit
+|     +-- Delete
+|     +-- Search
+|     +-- Filter
+|     +-- Sort
+|
++-- Income
+|     |
+|     +-- Add Income
+|     +-- View Income
+|     +-- Edit Income
+|     +-- Delete Income
+|
++-- Budget
+|     |
+|     +-- Monthly Budget
+|     +-- Spent
+|     +-- Remaining
+|     +-- Progress
+|     +-- Alerts
+|
++-- Reports
+|     |
+|     +-- Daily
+|     +-- Weekly
+|     +-- Monthly
+|     +-- Category
+|     +-- Payment Method
+|     +-- Income vs Expense
+|
++-- Settings
+      |
+      +-- Dark Mode
+      +-- Export CSV
+      +-- Export JSON
+
+
+23. REACT LEARNING PROGRESSION
+------------------------------
+
+React Forms
+      ↓
+React Hook Form
+      ↓
+React Toastify
+      ↓
+Expense CRUD
+      ↓
+Search
+      ↓
+Filter
+      ↓
+Sorting
+      ↓
+useEffect
+      ↓
+localStorage
+      ↓
+React Router
+      ↓
+Context API
+      ↓
+Custom Hooks
+      ↓
+Charts
+      ↓
+API Integration
+      ↓
+Express.js
+      ↓
+MongoDB
+      ↓
+Authentication
+      ↓
+JWT
+      ↓
+HTTP-only Cookies
+      ↓
+Protected Routes
+      ↓
+Deployment
+
+
+24. RECOMMENDED DEVELOPMENT ORDER
+----------------------------------
+
+PHASE 1 - BASIC
+- Add Expense
+- Display Expenses
+- Delete Expense
+- React Hook Form
+- Toastify
+
+PHASE 2 - EXPENSE FEATURES
+- Edit Expense
+- Search
+- Category Filter
+- Date Filter
+- Payment Filter
+- Sorting
+
+PHASE 3 - DATA
+- useEffect
+- localStorage
+- Persistent Data
+
+PHASE 4 - DASHBOARD
+- Total Expenses
+- Expense Count
+- Average Expense
+- Highest Expense
+- Monthly Expense
+
+PHASE 5 - INCOME
+- Add Income
+- Edit Income
+- Delete Income
+- Income Categories
+- Balance Calculation
+
+PHASE 6 - BUDGET
+- Monthly Budget
+- Budget Progress
+- Remaining Budget
+- Budget Alerts
+
+PHASE 7 - VISUALIZATION
+- Pie Chart
+- Bar Chart
+- Line Chart
+- Income vs Expense
+
+PHASE 8 - REACT ADVANCED
+- React Router
+- Context API
+- useReducer
+- Custom Hooks
+- useMemo
+- useCallback
+- React.memo
+
+PHASE 9 - BACKEND
+- Node.js
+- Express
+- REST API
+- MongoDB
+- CRUD API
+
+PHASE 10 - AUTHENTICATION
+- Register
+- Login
+- Logout
+- JWT
+- HTTP-only Cookies
+- Protected Routes
+- User-specific Data
+
+PHASE 11 - FINAL FEATURES
+- Dark Mode
+- CSV Export
+- JSON Export
+- Recurring Expenses
+- Tags
+- Advanced Reports
+- Responsive Design
+
+PHASE 12 - DEPLOYMENT
+- React Frontend
+- Express Backend
+- MongoDB Atlas
+- Environment Variables
+- Production Deployment
+
+
+25. FINAL TECHNOLOGY STACK
+--------------------------
+
+FRONTEND:
+
+React
+React Router DOM
+React Hook Form
+React Toastify
+Axios
+Chart Library
+CSS
+
+
+BACKEND:
+
+Node.js
+Express.js
+MongoDB
+Mongoose
+JWT
+HTTP-only Cookies
+
+
+PROJECT ARCHITECTURE:
+
+React
+   ↓
+React Router
+   ↓
+Context API / State Management
+   ↓
+Axios
+   ↓
+Express REST API
+   ↓
+Authentication Middleware
+   ↓
+Mongoose
+   ↓
+MongoDB
+
+
+26. CURRENT PROJECT → NEXT STEPS
+--------------------------------
+
+Your current project already has:
+
+✓ Add Expense
+✓ React Hook Form
+✓ Toastify
+✓ Expense List
+✓ Delete Expense
+✓ Search
+✓ Category Filter
+✓ Total Expense
+
+Next implement:
+
+1. Separate Search and Category state
+2. useEffect
+3. localStorage
+4. Edit Expense
+5. Date field
+6. Payment Method
+7. Sorting
+8. Dashboard
+9. Income
+10. Budget
+11. Charts
+12. React Router
+13. Context API
+14. API
+15. Express
+16. MongoDB
+17. Authentication
+
+FINAL GOAL:
+
+Personal Finance Tracker
+= Expense Management
++ Income Management
++ Budget Management
++ Reports
++ Charts
++ Authentication
++ Backend
++ Database
+
+
+Email 
+password encryption 
