@@ -1,28 +1,13 @@
 import { Routes, Route } from "react-router-dom";
-import UseStateDemo1 from "./components/useState/useStateDemo1";
-import UseStateDemo2 from "./components/useState/UseStateDemo2";
-import UseStateDemo3 from "./components/useState/UseStateDemo3";
-import StudentDetails from "./components/StudentDetails";
-import PageNotFound from "./components/PageNotFound";
-import MovieCard from "./components/MovieCard";
-import UseStateDemo4 from "./components/useState/useStateDemo4";
-import Header from "./components/Header";
-import UseStateDemo5 from "./components/useState/UseStateDemo5";
-import FormDemo1 from "./components/forms/FormDemo1";
-import FormDemo2 from "./components/forms/FormDemo2";
-import FormDemo3 from "./components/forms/FormDemo3";
-import HookForm1 from "./components/forms/HookForm1";
-import HookForm2 from "./components/forms/HookForm2";
-import UseEffectDemo1 from "./components/useEffect/UseEffectDemo1";
-import USeEffectDemo2 from "./components/useEffect/USeEffectDemo2";
-import UseEffectDemo3 from "./components/useEffect/UseEffectDemo3";
 import AddExpense from "./components/expenseTracker/AddExpense";
 import Expense from "./components/expenseTracker/Expense";
-import { useState } from "react";
+import { useState, React } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
   const [expense, setExpense] = useState([]);
-  
+
   console.log(expense);
   return (
     <div>
@@ -31,35 +16,72 @@ const App = () => {
           path="/add-expense"
           element={<AddExpense setExpense={setExpense} />}
         />
-        <Route 
-        path="/expense" 
-        element={<Expense expense={expense}  setExpense={setExpense}/>} />
+        <Route
+          path="/expense"
+          element={<Expense expense={expense} setExpense={setExpense} />}
+        />
       </Routes>
-      {/* <UseEffectDemo1/> */}
-      {/* <USeEffectDemo2/> */}
-      {/* <UseEffectDemo3/> */}
 
-      {/* <HookForm1/> */}
-      {/* <HookForm2/> */}
-      {/* <Header/>
-      <Routes>
-        <Route path="/studentDetails" element={<StudentDetails />} />
-        <Route path="/movieCard" element={<MovieCard />} />
-        <Route path="/useStateDemo1" element={<UseStateDemo1 />} />
-        <Route path="/useStateDemo2" element={<UseStateDemo2 />} />
-        <Route path="/useStateDemo3" element={<UseStateDemo3 />} />
-        <Route path="/useStateDemo4" element={<UseStateDemo4 />} />
-        <Route path="/useStateDemo5" element={<UseStateDemo5 />} />
-        <Route path="/formdemo1" element={<FormDemo1/>} />
-        <Route path="/formdemo2" element={<FormDemo2/>} />
-        <Route path="/formdemo3" element={<FormDemo3/>} />
-        <Route path="*" element={<PageNotFound />} />
-      </Routes> */}
+      <ToastContainer position="top-center" autoClose={1000} />
+      {/* 
+      top-right
+top-center
+top-left
+
+bottom-right
+bottom-center
+bottom-left
+ */}
     </div>
   );
 };
 
 export default App;
+
+// import UseStateDemo1 from "./components/useState/useStateDemo1";
+// import UseStateDemo2 from "./components/useState/UseStateDemo2";
+// import UseStateDemo3 from "./components/useState/UseStateDemo3";
+// import StudentDetails from "./components/StudentDetails";
+// import PageNotFound from "./components/PageNotFound";
+// import MovieCard from "./components/MovieCard";
+// import UseStateDemo4 from "./components/useState/useStateDemo4";
+// import Header from "./components/Header";
+// import UseStateDemo5 from "./components/useState/UseStateDemo5";
+// import FormDemo1 from "./components/forms/FormDemo1";
+// import FormDemo2 from "./components/forms/FormDemo2";
+// import FormDemo3 from "./components/forms/FormDemo3";
+// import HookForm1 from "./components/forms/HookForm1";
+// import HookForm2 from "./components/forms/HookForm2";
+// import UseEffectDemo1 from "./components/useEffect/UseEffectDemo1";
+// import USeEffectDemo2 from "./components/useEffect/USeEffectDemo2";
+// import UseEffectDemo3 from "./components/useEffect/UseEffectDemo3";
+
+// const App = () => {
+//       {/* <UseEffectDemo1/> */}
+//       {/* <USeEffectDemo2/> */}
+//       {/* <UseEffectDemo3/> */}
+
+//       {/* <HookForm1/> */}
+//       {/* <HookForm2/> */}
+//       {/* <Header/>
+//       <Routes>
+//         <Route path="/studentDetails" element={<StudentDetails />} />
+//         <Route path="/movieCard" element={<MovieCard />} />
+//         <Route path="/useStateDemo1" element={<UseStateDemo1 />} />
+//         <Route path="/useStateDemo2" element={<UseStateDemo2 />} />
+//         <Route path="/useStateDemo3" element={<UseStateDemo3 />} />
+//         <Route path="/useStateDemo4" element={<UseStateDemo4 />} />
+//         <Route path="/useStateDemo5" element={<UseStateDemo5 />} />
+//         <Route path="/formdemo1" element={<FormDemo1/>} />
+//         <Route path="/formdemo2" element={<FormDemo2/>} />
+//         <Route path="/formdemo3" element={<FormDemo3/>} />
+//         <Route path="*" element={<PageNotFound />} />
+//       </Routes> */}
+//     </div>
+//   );
+// };
+
+// export default App;
 
 //  * Lecture 3
 
