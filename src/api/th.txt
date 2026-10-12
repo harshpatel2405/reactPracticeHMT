@@ -1,0 +1,34 @@
+API 
+---
+Application programming Interface 
+
+Work -- Carry data 
+                   a. requested by the client -- response from backend 
+                    . PROVIDE ME MY PROFILE INFORMATION
+                    . PROVIDE ME ALL THE TRANSACTION HISTORY 
+        
+                   b. sent by the client -- received by backend
+                    . LOGIN CREDENTIALS ARE SENT , CHECK WHETHER THIS ARE CORRECT OR NOT 
+                    . A NEW USER CREDENTIALS HAS BEEN SENT , STORE THIS NEW USER ...
+
+USING API 
+---------
+FETCH -- JS 
+AXIOS -- THIRD PARTY LIBRARY
+
+npm i axios 
+
+1. path (on which location api is there)
+2. body (data to be send to backend)
+3. headers 
+    -> will contain extra INFORMATION related to API
+    -> Parcel Box (value = parcel)
+    -> box will contain extra INFORMATION like sender's name , receiver's name , address
+
+HTTP Methods 
+------------
+1. GET    -- backend to frontend 
+2. POST   -- frontend to backend (new data/INFORMATION)
+3. PUT    -- id (101) [complete user update]
+4. PATCH  -- id (101) [partial user update]
+5. DELETE -- id (101) [delete this user from database]

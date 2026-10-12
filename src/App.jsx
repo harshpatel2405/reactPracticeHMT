@@ -1,23 +1,33 @@
 import React, { useContext } from "react";
 import ContextDemo1 from './components/context/ContextDemo1.jsx';
 import { UserContext } from "./components/context/UserContext.jsx";
+import GetAPIExample from "./api/GetAPIExample.jsx";
+import PostAPIExample from "./api/PostAPIExample.jsx";
+import DeleteAPIExample from "./api/DeleteAPIExample.jsx";
+import PatchAPIExample from "./api/PatchAPIExample.jsx";
 
 const App = () => {
   
   return (
-    <UserContext.Provider value='demo'>
-      <Home />
-      <ContextDemo1/>
-    </UserContext.Provider>
+    <div>
+      <GetAPIExample/>
+      <PostAPIExample/>
+      <DeleteAPIExample/>
+      <PatchAPIExample/>
+      </div>
+    // <UserContext.Provider value='demo'>
+    //   <Home />
+    //   <ContextDemo1/>
+    // </UserContext.Provider>
   );
 };
 
-const Home =()=>{
-  const name = useContext(UserContext);
-  return (
-    <h1>Name : {name}</h1>
-  )
-}
+// const Home =()=>{
+//   const name = useContext(UserContext);
+//   return (
+//     <h1>Name : {name}</h1>
+//   )
+// }
 
 export default App;
 
