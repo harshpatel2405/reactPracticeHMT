@@ -5,15 +5,17 @@ import GetAPIExample from "./api/GetAPIExample.jsx";
 import PostAPIExample from "./api/PostAPIExample.jsx";
 import DeleteAPIExample from "./api/DeleteAPIExample.jsx";
 import PatchAPIExample from "./api/PatchAPIExample.jsx";
+import GetDataApi from "./api/GetDataApi.jsx";
 
 const App = () => {
   
   return (
     <div>
-      <GetAPIExample/>
+      {/* <GetAPIExample/>
       <PostAPIExample/>
       <DeleteAPIExample/>
-      <PatchAPIExample/>
+      <PatchAPIExample/> */}
+      <GetDataApi/>
       </div>
     // <UserContext.Provider value='demo'>
     //   <Home />

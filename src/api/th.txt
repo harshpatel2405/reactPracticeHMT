@@ -32,3 +32,22 @@ HTTP Methods
 3. PUT    -- id (101) [complete user update]
 4. PATCH  -- id (101) [partial user update]
 5. DELETE -- id (101) [delete this user from database]
+
+
+
+TASK 3 – Todo List
+Difficulty: Medium
+
+API: https://jsonplaceholder.typicode.com/todos
+
+Requirements:
+
+Fetch all todos when the button is clicked.
+
+Display: Todo ID , User ID , Title ,  Completed status
+
+If completed is true, display "Completed".
+
+Otherwise, display "Pending".
+
+Use conditional rendering to show the status.

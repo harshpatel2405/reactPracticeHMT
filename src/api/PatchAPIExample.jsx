@@ -24,8 +24,8 @@ const PatchAPIExample = () => {
 };
 
 export default PatchAPIExample;
-json dummy api for get 
-json dummy api for post 
-json dummy api for patch 
-json dummy api for put
-json dummy api for delete
+// json dummy api for get 
+// json dummy api for post 
+// json dummy api for patch 
+// json dummy api for put
+// json dummy api for delete
