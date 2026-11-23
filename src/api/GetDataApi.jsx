@@ -14,7 +14,7 @@ const GetDataApi = () => {
 
     console.log(response.data.quotes)
     console.log(response.status)
-
+3
     setUsers(response.data.quotes);
     setLoading(false);
   };

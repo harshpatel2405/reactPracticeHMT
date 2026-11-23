@@ -9,3 +9,9 @@ parent ->props ->child ->props ->grandchild
     context 
   /   |    \
 par  child  grandchild
+
+1. Create a context 
+2. app.jsx (we need to create a provider and
+    pass a value)
+3. add components in the provider 
+4. in the component call the passed data and use that 

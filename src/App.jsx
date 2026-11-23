@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import ContextDemo1 from './components/context/ContextDemo1.jsx';
 import { UserContext } from "./components/context/UserContext.jsx";
 import GetAPIExample from "./api/GetAPIExample.jsx";
@@ -6,17 +6,31 @@ import PostAPIExample from "./api/PostAPIExample.jsx";
 import DeleteAPIExample from "./api/DeleteAPIExample.jsx";
 import PatchAPIExample from "./api/PatchAPIExample.jsx";
 import GetDataApi from "./api/GetDataApi.jsx";
+import ThemeContext from "./components/context/ThemeContext.jsx";
+import Navbar from "./components/context/Navbar.jsx";
+import Dashboard from "./components/context/Dashboard.jsx";
 
 const App = () => {
   
+  const [theme , setTheme]= useState('dark')
+
   return (
     <div>
       {/* <GetAPIExample/>
       <PostAPIExample/>
       <DeleteAPIExample/>
       <PatchAPIExample/> */}
-      <GetDataApi/>
+      {/* <GetDataApi/> */}
+      
+
+
+      <ThemeContext.Provider value={{theme , setTheme}}>
+        <Navbar/>
+        <Dashboard/>
+      </ThemeContext.Provider>
       </div>
+
+      
     // <UserContext.Provider value='demo'>
     //   <Home />
     //   <ContextDemo1/>
